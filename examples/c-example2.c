@@ -38,6 +38,7 @@ void encode(FILE* inputFile, FILE* outputFile)
 	/*---------- START ENCODING ----------*/
 	/* initialise the encoder state */
 	base64_init_encodestate(&es);
+	es.chars_per_line = 72;
 	/* gather data from the input and send it to the output */
 	while (1)
 	{
